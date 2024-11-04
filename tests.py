@@ -32,9 +32,14 @@ class TestCalculations(unittest.TestCase):
     def test_CreateHex(self):
         
         self.assertEqual(self.decimaltohex.createHex(),self.CompleteHex)
-  
+
+    def test_SmallNumber(self):
+        num = 15 #must be > 9 to test letters
+        smalldecimaltohex = Decimaltohex(num)
+        self.assertEqual(smalldecimaltohex.createHex(),'0xF')
+
     def test_SmallerNumber(self):
-        num = 2 #less that 16
+        num = 2 #less than 16
         smalldecimaltohex = Decimaltohex(num)
         self.assertEqual(smalldecimaltohex.createHex(),'0x'+str(num))
 
