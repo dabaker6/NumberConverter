@@ -52,9 +52,10 @@ class Decimaltohex():
             hexList.append(self.mappedModulo)
             self.num = self.integer
         
+        self.modulo = self.num
+        self.mapModulo()
 
-        
-        hexList.append(str(self.num))
+        hexList.append(self.mappedModulo)
         hexList.reverse()
 
         for char in hexList:
