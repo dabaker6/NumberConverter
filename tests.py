@@ -1,7 +1,7 @@
 import unittest
 from modules.decimaltohex import Decimaltohex
 
-class TestCalculations(unittest.TestCase):
+class Test_decimaltohex(unittest.TestCase):
 
     def setUp(self):
 
@@ -56,7 +56,10 @@ class TestCalculations(unittest.TestCase):
         num = 2147483648
         self.assertRaises(OverflowError,Decimaltohex,num)
 
-    
+class Test_hextodecimal(unittest.TestCase):    
+
+    def test(self):
+        print("Iwork")
 
 if __name__ == '__main__':
     unittest.main()
