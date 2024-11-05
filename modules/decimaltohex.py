@@ -1,6 +1,6 @@
 import data.hexmapping as hexmapping
 
-class Decimaltohex():
+class Decimal_to_hex():
     
     integer: int
     modulo: int
