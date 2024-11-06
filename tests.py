@@ -107,6 +107,14 @@ class Test_hextodecimal(unittest.TestCase):
     def test_createFinalValueWithNoValues(self):
         hextodecimal = Hex_to_decimal("0")
         self.assertEquals(hextodecimal.convertToDec(),0)
-                
+
+    def test_lowercase(self):
+        self.hextodecimal.mapValue('f')
+        self.assertEqual(self.hextodecimal.mappedValue,15)
+        self.hextodecimal.mapValue('F')
+        self.assertEqual(self.hextodecimal.mappedValue,15)
+        self.hextodecimal.mapValue('a')
+        self.assertEqual(self.hextodecimal.mappedValue,10)
+ 
 if __name__ == '__main__':
     unittest.main()

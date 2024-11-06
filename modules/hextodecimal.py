@@ -15,7 +15,7 @@ class Hex_to_decimal():
         self.hex = hex
     
     def mapValue(self,valueToMap:str) -> int:
-        self.mappedValue = hexmapping.numDict[valueToMap]
+        self.mappedValue = hexmapping.numDict[valueToMap.upper()]
 
     def createValuesToMap(self) -> list[str]:
         self.mappedValues = [0]
